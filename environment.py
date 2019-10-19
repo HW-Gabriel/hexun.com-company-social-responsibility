@@ -10,14 +10,10 @@ a=ua.random
 headers={"User-Agent":a}
 
 
-#设置年份、页数、个数
-page=183
-year='2016'
-n=3650
 #开始爬取
 table=[]
 y=[]
-for j in range(8):
+for j in range(9):#爬取2010-2017
     for i in range(200):
         url='http://stockdata.stock.hexun.com/zrbg/data/zrbList.aspx?date={}-12-31&count=20&pname=20&titType=null&page={}'.format(j+2009,i+1)
         response=requests.get(url,headers=headers).text
